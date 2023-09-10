@@ -15,7 +15,7 @@ services:
     ports:
       - "0.0.0.0:5672:5672"
       - "0.0.0.0:15672:15672"
-    restart: always
+    restart: no
     networks:
       - rabbitmq_network
       - micro_network
