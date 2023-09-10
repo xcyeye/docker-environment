@@ -10,7 +10,7 @@ services:
     container_name: seata
     restart: no
     volumes:
-      - /opt/docker/project/seata/conf:/app
+      - /opt/docker/project/seata/conf:/home/seata/config
 volumes:
   seata_data:
     name: seata_data
