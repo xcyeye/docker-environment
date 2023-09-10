@@ -1,6 +1,9 @@
 services:
   seata:
+    hostname: seata
     image: seataio/seata-server:1.4.2
+    volumes:
+      - /opt/docker/project/seata/conf:/home/seata/config
     env_file:
       - ./seata.env
     ports:
@@ -12,8 +15,6 @@ services:
     networks:
       - seata_network
       - micro_network
-    volumes:
-      - /opt/docker/project/seata/conf:/home/seata/config
 volumes:
   seata_data:
     name: seata_data
