@@ -1,0 +1,25 @@
+services:
+  seata:
+    env_file:
+      - ./seata.env
+    ports:
+      - 0.0.0.0:8091:${SEATA_PORT}
+    expose:
+      - ${SEATA_PORT}
+    container_name: seata
+    restart: no
+    volumes:
+      - /opt/docker/project/seata/conf:/app
+volumes:
+  seata_data:
+    name: seata_data
+    driver: local
+
+networks:
+  seata_network:
+    name: seata_network
+    driver: bridge
+  micro_network:
+    external: false
+    name: micro_network
+    driver: bridge
