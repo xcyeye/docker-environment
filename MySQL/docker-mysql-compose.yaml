@@ -1,6 +1,6 @@
 services:
   mysql:
-    hostname: mysql
+    hostname: mysql_host
     env_file:
       - ./mysql.env
     container_name: mysql8_db

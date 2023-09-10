@@ -1,6 +1,6 @@
 services:
   redis:
-    hostname: redis
+    hostname: redis_host
     container_name: redis_db
     image: redis:7.2.1
     expose:

@@ -1,6 +1,6 @@
 services:
   rabbitmq:
-    container_name: rabbitMq
+    container_name: rabbitMq_host
     hostname: docker_rabbitmq
     image: rabbitmq:3.12.4
     environment:
