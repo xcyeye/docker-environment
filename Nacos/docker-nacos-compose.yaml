@@ -17,6 +17,7 @@ services:
         target: /home/nacos
       - /opt/docker/project/nacos/logs:/home/nacos/logs
       - /opt/docker/project/nacos/conf:/home/nacos/conf:ro
+      - /opt/docker/project/nacos/init.d:/home/nacos/init.d
 volumes:
   nacos_standalone_data:
     name: nacos_standalone_data
