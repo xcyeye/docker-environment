@@ -3,7 +3,7 @@ services:
     hostname: seata
     image: seataio/seata-server:1.4.2
     volumes:
-      - /opt/docker/project/seata/conf:/home/seata/config
+            - /opt/docker/project/seata/conf:/home/seata/config:rw
     env_file:
       - ./seata.env
     ports:
