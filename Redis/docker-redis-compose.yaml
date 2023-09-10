@@ -25,6 +25,6 @@ networks:
     name: redis-network
     driver: bridge
   micro-network:
-    external: true
+    external: false
     driver: bridge
     name: micro-network

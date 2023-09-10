@@ -26,7 +26,7 @@ networks:
     name: nacos_network
     driver: bridge
   micro_network:
-    external: true
+    external: false
     name: micro_network
     driver: bridge
 

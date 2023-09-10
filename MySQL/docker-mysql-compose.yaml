@@ -35,4 +35,4 @@ networks:
   micro_network:
     name: micro_network
     driver: bridge
-    external: true
+    external: false

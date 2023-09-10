@@ -28,6 +28,6 @@ networks:
     driver: bridge
     name: rabbitmq_network
   micro_network:
-    external: true
+    external: false
     driver: bridge
     name: micro_network
