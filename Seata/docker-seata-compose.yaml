@@ -1,5 +1,6 @@
 services:
   seata:
+    image: seataio/seata-server:1.4.2
     env_file:
       - ./seata.env
     ports:
