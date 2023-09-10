@@ -9,6 +9,9 @@ services:
       - 8091
     container_name: seata
     restart: no
+    networks:
+      - seata_network
+      - micro_network
     volumes:
       - /opt/docker/project/seata/conf:/home/seata/config
 volumes:
