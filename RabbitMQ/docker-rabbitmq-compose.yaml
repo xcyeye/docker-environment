@@ -8,7 +8,7 @@ services:
       RABBITMQ_DEFAULT_PASS: Cqy19981202
     volumes:
       - /opt/docker/project/rabbitmq/log:/var/log/rabbitmq:rw
-      - /opt/docker/project/rabbitmq/conf:/etc/rabbitmq:rw
+      #- /opt/docker/project/rabbitmq/conf:/etc/rabbitmq:rw
       - type: volume
         source: rabbitmq_data
         target: /var/lib/rabbitmq
