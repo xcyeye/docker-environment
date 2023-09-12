@@ -1,7 +1,9 @@
 services:
   seata:
     hostname: seata
-    image: seataio/seata-server:1.4.2
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
             - ./conf:/home/seata/conf:rw
     env_file:
