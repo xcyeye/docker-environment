@@ -33,13 +33,13 @@ logging:
 seata:
   config:
     # support: nacos 、 consul 、 apollo 、 zk  、 etcd3
-    type: file
+    type: nacos
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: nacos_standalone_host:8848
       namespace:
       group: SEATA_GROUP
-      username:
-      password:
+      username: nacos
+      password: nacos
       context-path:
       ##if use MSE Nacos with auth, mutex with username/password attribute
       #access-key:
@@ -68,16 +68,16 @@ seata:
       key: seata.properties
   registry:
     # support: nacos 、 eureka 、 redis 、 zk  、 consul 、 etcd3 、 sofa
-    type: file
+    type: nacos
     preferred-networks: 30.240.*
     nacos:
       application: seata-server
-      server-addr: 127.0.0.1:8848
+      server-addr: nacos_standalone_host:8848
       group: SEATA_GROUP
-      namespace:
+      namespace: 81398903-78fb-402e-9a20-bcf1c5fa4aa0
       cluster: default
-      username:
-      password:
+      username: nacos
+      password: nacos
       context-path:
       ##if use MSE Nacos with auth, mutex with username/password attribute
       #access-key:
@@ -138,7 +138,7 @@ seata:
       enable-branch-async-remove: false #enable to asynchronous remove branchSession
   store:
     # support: file 、 db 、 redis
-    mode: file
+    mode: db
     session:
       mode: file
     lock:
@@ -153,10 +153,10 @@ seata:
     db:
       datasource: druid
       db-type: mysql
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/seata?rewriteBatchedStatements=true
-      user: mysql
-      password: mysql
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://mysql_host:3306/seata?rewriteBatchedStatements=true
+      user: nacos
+      password: nacos
       min-conn: 10
       max-conn: 100
       global-table: global_table

@@ -15,7 +15,7 @@ RUN curl -SL https://qiniu-cdn.xcye.xyz/seata-server-1.7.1.tar.gz -o /home/seata
     && tar -xzvf /home/seata/seata-server.tar.gz -C /home/seata \
     && mv /home/seata/seata/seata-server-1.7.1/* /home/seata\
     && rm -rf /home/seata/seata-server.tar.gz \
-    && rm /home/seata/conf/registry.conf /home/seata/conf/file.conf\
+    && rm /home/seata/conf/registry.conf/* \
     && ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 
 RUN ["/bin/sh", "-c", "ls /home/seata"]
