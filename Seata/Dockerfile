@@ -13,4 +13,4 @@ RUN curl -SL https://qiniu-cdn.xcye.xyz/seata-server-1.4.2.tar.gz -o /home/seata
 
 RUN ["/bin/sh", "-c", "ls /home/seata"]
 EXPOSE 8091
-RUN ["/home/seata/bin/seata-server.sh"]
+ENTRYPOINT ["/home/seata/bin/seata-server.sh"]
