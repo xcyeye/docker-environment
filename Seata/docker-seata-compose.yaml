@@ -3,7 +3,7 @@ services:
     hostname: seata
     image: seataio/seata-server:1.4.2
     volumes:
-            - ./conf:/home/seata/config:rw
+            - ./conf:/home/seata/conf:rw
     env_file:
       - ./seata.env
     ports:
@@ -12,7 +12,6 @@ services:
       - 8091
     container_name: seata
     restart: no
-    command: ["/bin/sh", "-c", "ls /home/seata/config"]
     networks:
       - seata_network
       - micro_network
